@@ -1,0 +1,86 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fafafa;
+  color: #333;
+}
+
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 3px #ddd;
+  text-align: center;
+}
+
+.logo {
+  width: 100%;
+  max-width: 250px;
+}
+
+.wrapper {
+  padding: 25px;
+}
+
+.content {
+  padding: 25px;
+  margin: auto;
+  max-width: 500px;
+  box-shadow: 0 0 3px #ddd;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 20px;
+  margin-top: 0;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+input, button, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  resize: none;
+  font-size: 14px;
+}
+
+input:focus, textarea:focus {
+  border-color: #aaa;
+}
+
+textarea {
+  height: 100px;
+}
+
+button {
+  background-color: #F06F2E;
+  border-color: #F06F2E;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.version {
+  text-align: center;
+  margin-bottom: 0;
+}
