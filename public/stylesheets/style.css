@@ -66,6 +66,12 @@ input:focus, textarea:focus {
   border-color: #aaa;
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
 textarea {
   height: 100px;
 }
@@ -75,7 +81,7 @@ button {
   border-color: #F06F2E;
   color: #fff;
   cursor: pointer;
-  padding: 8px;
+  padding: 10px;
   font-size: 13px;
   font-weight: 600;
 }
@@ -83,4 +89,26 @@ button {
 .version {
   text-align: center;
   margin-bottom: 0;
+}
+
+.flash {
+  padding: 15px;
+  font-size: 13px;
+  text-align: center;
+  background-color: #fefefe;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  font-weight: 300;
+}
+
+.flash + .flash {
+  border-top: none;
+}
+
+.flash--success {
+  color: #00C471;
+}
+
+.flash--error {
+  color: #EA4A24;
 }

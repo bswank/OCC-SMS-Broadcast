@@ -5,8 +5,8 @@ block content
   hr
   h2 Sign Up For SMS Notifications
   form(method='post' action='/add')
-    input(type='text' name='first' placeholder='First Name')
-    input(type='text' name='last' placeholder='Last Name')
-    input(type='text' name='phone' placeholder='Phone Number')
+    input(type='text' name='first' placeholder='First Name' required)
+    input(type='text' name='last' placeholder='Last Name' required)
+    input(type='number' name='phone' placeholder='Phone Number' required)
     button(type="submit") Sign Up
     

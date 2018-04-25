@@ -5,6 +5,6 @@ block content
   hr
   h2 Send Test SMS
   form(method='post' action='/send')
-    input(type='text' name='to' placeholder='To Phone #')
+    input(type='number' name='to' placeholder='To Phone #')
     textarea(name='message' placeholder='SMS Message')
     button(type='submit') Send SMS
