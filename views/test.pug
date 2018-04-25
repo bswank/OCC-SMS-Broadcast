@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 OCC Notify
+  hr
+  h2 Send Test SMS
+  form(method='post' action='/send')
+    input(type='text' name='to' placeholder='To Phone #')
+    textarea(name='message' placeholder='SMS Message')
+    button(type='submit') Send SMS

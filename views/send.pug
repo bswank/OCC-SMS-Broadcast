@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1 OCC Notify
+  hr
+  h2 Send SMS Broadcast
+  form(method="post" action='/sendToAll')
+    textarea(name='message' placeholder='SMS Message')
+    button(type='submit') Send SMS To All

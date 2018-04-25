@@ -3,25 +3,10 @@ extends layout
 block content
   h1 OCC Notify
   hr
-  h2 Send SMS Broadcast
-  form(method="post" action='/sendToAll')
-    textarea(name='message' placeholder='SMS Message')
-    button(type='submit') Send SMS To All
-  hr
-  h2 Add Contact
+  h2 Sign Up For SMS Notifications
   form(method='post' action='/add')
     input(type='text' name='first' placeholder='First Name')
     input(type='text' name='last' placeholder='Last Name')
     input(type='text' name='phone' placeholder='Phone Number')
-    button(type="submit") Add Contact
-  hr
-  h2 Send Test SMS
-  form(method='post' action='/send')
-    input(type='text' name='to' placeholder='To Phone #')
-    textarea(name='message' placeholder='SMS Message')
-    button(type='submit') Send SMS
-  pre
-    ul
-      if contacts
-        each contact in contacts
-          li #{contact.first} #{contact.last} #{contact.phone}
+    button(type="submit") Sign Up
+    

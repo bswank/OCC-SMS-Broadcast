@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1 OCC Notify
+  hr
+  h2 Contacts
+  pre
+    ul
+      if contacts
+        each contact in contacts
+          li #{contact.first} #{contact.last} #{contact.phone}

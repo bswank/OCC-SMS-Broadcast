@@ -8,9 +8,21 @@ const accountSid = process.env.TWILIO_ACCOUNT_SID
 const authToken = process.env.TWILIO_AUTH_TOKEN
 const client = require('twilio')(accountSid, authToken)
 
-router.get('/', async (req, res) => {
+router.get('/', (req, res) => {
+  res.render('index')
+})
+
+router.get('/test', (req, res) => {
+  res.render('test')
+})
+
+router.get('/send', (req, res) => {
+  res.render('send')
+})
+
+router.get('/contacts', async (req, res) => {
   const contacts = await Contact.find()
-  res.render('index', { contacts })
+  res.render('contacts', { contacts })
 })
 
 router.post('/send', async (req, res) => {
