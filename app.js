@@ -7,12 +7,15 @@ const mongoose = require('mongoose')
 const MongoStore = require('connect-mongo')(session)
 const flash = require('connect-flash')
 const favicon = require('serve-favicon')
+const sslRedirect = require('heroku-ssl-redirect')
 
 require('./models/Contact')
 
 const index = require('./routes/index')
 
 const app = express()
+
+app.use(sslRedirect())
 
 require('dotenv').config({ path: '.env' })
 
@@ -74,3 +77,5 @@ mongoose.Promise = global.Promise // Tell Mongoose to use ES6 promises
 mongoose.connection.on('error', (err) => {
   console.error(`🔥  DATABASE ERROR: ${err.message}\n`)
 })
+
+console.info('APPLICATION STARTED SUCCESSFULLY')

@@ -2,9 +2,10 @@ const express = require('express')
 const router = express.Router()
 const mongoose = require('mongoose')
 const Contact = mongoose.model('Contact')
+require('dotenv').config({ path: '.env' })
 
-const accountSid = 'AC7d9d736fce4530a28f3b2f887c77bc2c'
-const authToken = 'efed38595c86c29f9b58cab96f4de25d'
+const accountSid = process.env.TWILIO_ACCOUNT_SID
+const authToken = process.env.TWILIO_AUTH_TOKEN
 const client = require('twilio')(accountSid, authToken)
 
 router.get('/', async (req, res) => {
@@ -24,7 +25,9 @@ router.post('/send', async (req, res) => {
       res.redirect('/')
     })
     .catch(async (error) => {
-      console.error(error.message)
+      if (process.env.NODE_ENV === 'development') {
+        console.error(error.message)
+      }
       await req.flash('success', error.message)
       res.redirect('/')
     })
